@@ -1,19 +1,14 @@
+// app/component/Navbar.jsx
 import Link from "next/link";
 
 export default function Navbar() {
   return (
-    <nav className="navbar navbar-expand-md shadow-sm py-1">
+    
+    <nav className="navbar navbar-expand-md shadow-sm py-1 fixed-top">
       <div className="container">
-        <img
-          src="/logo.jpg"
-          className=" rounded-2"
-          width={200}
-          height={80}
-          alt=""
-        />
-        <a href="/" className="navbar-brand fw-bolder text-uppercase">
-          Portfolio
-        </a>
+        <img src="/logo.jpg" className="rounded-2" width={200} height={80} alt="Logo" />
+        <a href="/" className="navbar-brand fw-bolder text-uppercase">Portfolio</a>
+
         <button
           className="navbar-toggler shadow-none"
           type="button"
@@ -23,36 +18,26 @@ export default function Navbar() {
           aria-expanded="false"
           aria-label="Toggle navigation"
         >
-          <span className="navbar-toggler-icon"></span>
+          <span className="bi bi-list text-light"></span>
         </button>
 
-        <div
-          className="collapse navbar-collapse justify-content-end align-center"
-          id="main-nav"
-        >
+        <div className="collapse navbar-collapse justify-content-end" id="main-nav">
           <ul className="navbar-nav">
             <li className="nav-item">
-              <a href="/about" className="nav-link fw-bold">
-                About Us
-              </a>
+              <Link href="/" className="nav-link fw-bold">Home</Link>
             </li>
             <li className="nav-item">
-              <a href="skills" className="nav-link fw-bold">
-              Skills
-              </a>
+              <Link href="/about" className="nav-link fw-bold">About Us</Link>
             </li>
             <li className="nav-item">
-              <a href="/projects" className="nav-link fw-bold">
-               Projects
-              </a>
+              <Link href="/skills" className="nav-link fw-bold">Skills</Link>
             </li>
-
             <li className="nav-item">
-              <a href="/contact" className="nav-link fw-bold">
-                Contact
-              </a>
+              <Link href="/work" className="nav-link fw-bold">Projects</Link>
             </li>
-           
+            <li className="nav-item">
+              <Link href="/contact" className="nav-link fw-bold">Contact</Link>
+            </li>
           </ul>
         </div>
       </div>

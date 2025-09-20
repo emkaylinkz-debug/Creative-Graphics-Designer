@@ -2,7 +2,6 @@ export default function AboutUs() {
   return (
     <>
       <div className="sectionTitle d-flex flex-row text-light">
-        <h3>01.</h3>
         <h4>About Me</h4>
       </div>
       <div className="row justify-content-center align-items-center text-light">
@@ -42,7 +41,7 @@ export default function AboutUs() {
           </div>
         </div>
         <div className="col-lg-4">
-          <img src="/about.jpg" className="img-fluid rounded"/>
+          <img src="/emkay.jpg" className="img-fluid rounded my-white-border"/>
         </div>
       </div>
     </>

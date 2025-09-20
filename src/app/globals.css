@@ -1,3 +1,4 @@
+/* globals.css */
 @import "bootstrap/dist/css/bootstrap.min.css";
 @import "bootstrap-icons";
 
@@ -8,10 +9,6 @@
   --softColor: #dfd9ff;
   --textColor: #00ffff;
 }
-
-/*--------------------------------------------------------------
-  # Navbar Section
-  --------------------------------------------------------------*/
 
 body {
   background-color: var(--bgColor);
@@ -28,7 +25,7 @@ body {
   padding: 0;
   display: flex;
   list-style: none;
-  align-items: end;
+  align-items: flex-end;
 }
 
 .navbar li {
@@ -56,25 +53,20 @@ body {
   color: var(--softColor);
 }
 
-/*--------------------------------------------------------------
-# General Title Section
---------------------------------------------------------------*/
 .section-title h2 {
   font-size: 28px;
   font-weight: 700;
-  color: var(--testColor);
+  color: var(--textColor);
   line-height: 60px;
   margin-bottom: 20px;
   text-transform: uppercase;
 }
+
 .section-title p {
   color: var(--hoverColor);
-
   font-size: 26px;
 }
-/*--------------------------------------------------------------
-# MainPage Section
---------------------------------------------------------------*/
+
 .mainPage {
   width: 100%;
   height: 100%;
@@ -94,6 +86,7 @@ body {
   font-size: 26px;
   font-weight: 600;
 }
+
 .mainPage .king p {
   color: var(--lightColor);
   margin: 20px 0 0 0;
@@ -112,7 +105,7 @@ body {
   border-radius: 4px;
   transition: 0.5s;
   color: var(--lightColor);
-  background: linear-gradient(var(--testColor), var(--softColor));
+  background: linear-gradient(var(--textColor), var(--softColor));
   box-shadow: 0px 5px 30px rgba(65, 84, 241, 0.4);
 }
 
@@ -139,6 +132,7 @@ body {
   border-bottom-left-radius: 50px;
   border-bottom-right-radius: 50px;
 }
+
 .mainPage .uper .hero-img {
   text-align: right;
 }
@@ -168,43 +162,131 @@ body {
     text-align: center;
     margin-top: 10px;
   }
-
   .mainPage .uper .hero-img img {
     width: 100%;
   }
-
   .mainPage .uper h1 {
     margin-top: 20px;
     font-size: 22px;
   }
-
   .mainPage .uper h2 {
     font-size: 18px;
   }
 }
+
 .section {
   background-color: var(--bgColor);
   margin-top: 50px;
 }
-.sectionTitle h3 {
-  font-weight: 900px;
-  font-size: 25px;
-  color: var(--textColor);
+
+.skills-section {
+  padding: 60px 20px;
+  background: transparent;
+  text-align: center;
 }
-.sectionTitle h4 {
-  font-weight: 900px;
-  font-size: 25px;
-  color: var(--lightColor);
-  padding-left: 5px;
+
+.skills-section .container {
+  max-width: 800px;
+  margin: 0 auto;
 }
-/*.sectionTitle h4 {
-  font-weight: 900px;
-  color: var(--lightColor);
-  font-size: 25px;
+
+.skills-section .title {
+  font-size: 2rem;
+  font-weight: bold;
+  margin-bottom: 20px;
+  color: #0d6efd;
 }
-.sectionTitle h3 {
-  font-weight: 900px;
-  color: var(--textColor);
-  font-size: 25px;
+
+.skills-section .description {
+  font-size: 1.1rem;
+  line-height: 1.6;
+  color: #f8f4f4;
+  margin-bottom: 30px;
 }
-*/
+
+.skills-list {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  flex-wrap: wrap;
+}
+
+.skill-item {
+  background: #fff;
+  border-radius: 20px;
+  padding: 10px 20px;
+  font-weight: 500;
+  color: #333;
+  box-shadow: 0 3px 6px rgba(0,0,0,0.1);
+  transition: transform 0.3s ease;
+  cursor: default;
+}
+
+.skill-item:hover {
+  transform: scale(1.05);
+  background: #e9ecef;
+}
+
+.contact-section {
+  padding: 60px 20px;
+  background: transparent;
+  text-align: center;
+  color: #fff;
+}
+
+.contact-section .container {
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+.contact-section .title {
+  font-size: 2rem;
+  font-weight: bold;
+  margin-bottom: 15px;
+  color: #fff;
+}
+
+.contact-section .description {
+  font-size: 1.1rem;
+  color: #ccc;
+  margin-bottom: 30px;
+}
+
+.contact-list p {
+  margin: 10px 0;
+  font-size: 1.1rem;
+}
+
+.contact-list a {
+  color: #0d6efd;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.contact-list a:hover {
+  text-decoration: underline;
+}
+.my-white-border {
+  border: 4px solid white;
+  border-radius: 12px;
+  box-shadow: 0 0 20px rgba(255, 255, 255, 0.6);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+
+  /* breathing glow animation */
+  animation: pulseGlow 2.5s infinite alternate ease-in-out;
+}
+
+.my-white-border:hover {
+  transform: scale(1.05); /* zoom in slightly */
+  box-shadow: 0 0 40px rgba(0, 150, 255, 0.9); /* bright blue glow */
+}
+
+/* Keyframes for breathing glow */
+@keyframes pulseGlow {
+  from {
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.4);
+  }
+  to {
+    box-shadow: 0 0 20px rgba(224, 236, 142, 0.9);
+  }
+}
